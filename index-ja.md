@@ -140,7 +140,7 @@ IRファイルは多くのソースから入手可能です：
 
 ### NAMファイルはどこで入手できますか？
 NAMモデルは以下で見つかります：
-- [ToneHunt](https://tonehunt.net) - コミュニティNAMモデル共有
+- [Tone3000](https://www.tone3000.com) - コミュニティNAMモデル共有
 - [Neural Amp Modeler](https://github.com/sdatkinson/neural-amp-modeler)を使って自分でトレーニング
 
 ### どのNAMアーキテクチャに対応していますか？

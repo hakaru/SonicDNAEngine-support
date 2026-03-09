@@ -75,7 +75,7 @@ Load Neural Amp Modeler files to recreate the sound of real audio equipment. NAM
 
 While NAM is widely known for guitar amp modeling, the technology works for any audio equipment: preamps, channel strips, tape machines, and more.
 
-Thousands of free NAM models are available on [ToneHunt](https://tonehunt.net).
+Thousands of free NAM models are available on [Tone3000](https://www.tone3000.com).
 
 ### IR Convolution Processing
 
