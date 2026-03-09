@@ -73,9 +73,8 @@ Instrument/Mic → Audio Interface → iPhone/iPad → Audio Interface → Speak
 1. Connect your USB audio interface to iPhone/iPad
 2. Connect your instrument or microphone to audio interface input
 3. Connect audio interface output to speakers/headphones
-4. Launch SonicDNA Engine
-5. Tap "Start Audio Engine"
-6. Load IR and/or NAM files
+4. Launch SonicDNA Engine (audio engine starts automatically)
+5. Load IR and/or NAM files
 
 ### AUv3 Plugin Mode
 

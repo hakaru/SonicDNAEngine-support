@@ -46,7 +46,7 @@ Instrument/Mic → Audio Interface → iPhone/iPad → Audio Interface → Speak
                                     (SonicDNA Engine)
 ```
 
-Tap "Start Audio Engine" and you're processing audio through your favorite equipment models with low-latency monitoring.
+Launch the app and the audio engine starts automatically — you're immediately processing audio through your favorite equipment models with low-latency monitoring.
 
 ### AUv3 Plugin Mode
 
