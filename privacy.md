@@ -60,7 +60,7 @@ IR and NAM files you import into SonicDNA Engine are:
 
 SonicDNA Engine requires microphone access for real-time audio processing. This permission is:
 
-- Used solely for live audio input processing (guitar effects)
+- Used solely for live audio input processing
 - Only active when the audio engine is running
 - Audio is processed in real-time and never stored
 - Controllable via iOS Settings at any time

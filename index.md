@@ -2,25 +2,27 @@
 
 Welcome to SonicDNA Engine support page.
 
-SonicDNA Engine is an IR/NAM guitar amp simulator app with AUv3 plugin support for iOS.
+SonicDNA Engine is an IR/NAM audio processor app with AUv3 plugin support for iOS.
 
 ---
 
 ## 🎯 Overview
 
-SonicDNA Engine transforms your iPhone or iPad into a guitar amp and cabinet simulator. Load IR (Impulse Response) files for cabinet simulation and NAM (Neural Amp Modeler) files for amp modeling, with real-time low-latency audio processing.
+SonicDNA Engine transforms your iPhone or iPad into a versatile audio processor. Load IR (Impulse Response) files for speaker/room/mic simulation and NAM (Neural Amp Modeler) files for equipment modeling, with real-time low-latency audio processing.
+
+Whether you're a guitarist, keyboardist, vocalist, synthesizer enthusiast, or audiophile — SonicDNA Engine processes your audio through AI-powered modeling and convolution in real time.
 
 ---
 
 ## ✨ Key Features
 
-### 🎸 NAM Amp Modeling
-Load Neural Amp Modeler files to recreate the sound of real amplifiers with AI-powered digital modeling.
+### 🎛️ NAM Equipment Modeling
+Load Neural Amp Modeler files to recreate the sound of real audio equipment — guitar amps, bass amps, preamps, channel strips, and more — with AI-powered digital modeling.
 
-### 🔊 IR Cabinet Simulation
-Load impulse response files for accurate cabinet simulation using FFT-based convolution.
+### 🔊 IR Convolution Processing
+Load impulse response files for accurate simulation of speakers, cabinets, rooms, microphones, and acoustic spaces using FFT-based convolution.
 
-### 🎛️ Built-in Effects
+### 🎚️ Built-in Effects
 - **Noise Gate** - Adjustable threshold with smooth gating
 - **3-Band EQ** - Low shelf, Mid bell, High shelf parametric EQ
 - **Input/Output Gain** - Full signal level control
@@ -33,7 +35,7 @@ Use SonicDNA Engine as an Audio Unit Extension in any AUv3-compatible host:
 - IR/NAM file loading from within the plugin
 
 ### 🎵 Standalone Effector Mode
-Connect your guitar via USB audio interface and use as a standalone amp simulator:
+Connect your instrument or microphone via USB audio interface and use as a standalone processor:
 - Real-time audio processing with low latency
 - Support for USB audio interfaces
 - 48kHz sample rate
@@ -43,18 +45,34 @@ Save and recall your favorite settings including IR/NAM selection and all parame
 
 ---
 
+## 🎸🎹🎤🎧 Use Cases
+
+### For Guitarists & Bassists
+Load NAM amp models and IR cabinet simulations for a complete amp-in-a-box experience. Access thousands of community amp models from ToneHunt.
+
+### For Keyboardists & Synth Players
+Run your keyboard or synthesizer through vintage preamp models and speaker IRs. Add analog warmth and character to digital sounds.
+
+### For Vocalists & Podcasters
+Use microphone IRs to simulate classic studio microphones. Apply subtle preamp coloring to your vocal chain.
+
+### For Audiophiles & Sound Designers
+Experiment with room IRs, speaker simulations, and equipment modeling. Shape your listening experience with precision convolution processing.
+
+---
+
 ## 🔌 Setup Guide
 
 ### Standalone Mode
 
 ```
-Guitar → Audio Interface → iPhone/iPad → Audio Interface → Amp/Headphones
-                            (SonicDNA Engine)
+Instrument/Mic → Audio Interface → iPhone/iPad → Audio Interface → Speakers/Headphones
+                                    (SonicDNA Engine)
 ```
 
 1. Connect your USB audio interface to iPhone/iPad
-2. Connect guitar to audio interface input
-3. Connect audio interface output to amp/headphones
+2. Connect your instrument or microphone to audio interface input
+3. Connect audio interface output to speakers/headphones
 4. Launch SonicDNA Engine
 5. Tap "Start Audio Engine"
 6. Load IR and/or NAM files
@@ -109,11 +127,16 @@ Input → Input Gain → Noise Gate → NAM → EQ → IR Convolution → Output
 ### What audio interfaces are supported?
 Any class-compliant USB audio interface should work. Tested with common interfaces like ZOOM AMS-22.
 
+### What instruments/sources can I use?
+Anything that outputs audio — electric guitar, bass, keyboards, synthesizers, microphones, drum machines, or any line-level source.
+
 ### Where can I get IR files?
 IR files are available from many sources:
 - Create your own with [SonicDNA Collector](https://apps.apple.com/app/id6758269736)
-- Download from communities like ToneHunt
-- Many free and commercial IR packs are available online
+- Speaker/cabinet IRs from communities like ToneHunt
+- Room and reverb IRs from various online sources
+- Microphone simulation IRs
+- Many free and commercial IR packs available online
 
 ### Where can I get NAM files?
 NAM models can be found at:

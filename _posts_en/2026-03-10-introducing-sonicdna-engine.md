@@ -1,9 +1,9 @@
 ---
-title: "Introducing SonicDNA Engine — IR/NAM Guitar Amp Simulator for iOS"
+title: "Introducing SonicDNA Engine — IR/NAM Audio Processor for iOS"
 date: 2026-03-10
 ---
 
-We're excited to announce **SonicDNA Engine**, a guitar amp and cabinet simulator for iPhone and iPad that brings the power of Neural Amp Modeler (NAM) and Impulse Response (IR) processing to iOS — both as a standalone effector and as an AUv3 plugin.
+We're excited to announce **SonicDNA Engine**, a versatile audio processor for iPhone and iPad that brings the power of Neural Amp Modeler (NAM) and Impulse Response (IR) processing to iOS — both as a standalone effector and as an AUv3 plugin.
 
 ---
 
@@ -14,9 +14,24 @@ SonicDNA Engine is the second piece of the **SonicDNA ecosystem**:
 - **SonicDNA Collector** = Capture the sonic DNA of your analog gear
 - **SonicDNA Engine** = Play back that sonic DNA anywhere
 
-Together, they complete the **Capture → Play** workflow. Record the characteristics of your favorite tube amp with Collector, then load the resulting files into Engine to recreate that sound in your DAW or live rig — all on your iPhone or iPad.
+Together, they complete the **Capture → Play** workflow. Record the characteristics of your favorite tube amp, vintage preamp, or studio compressor with Collector, then load the resulting files into Engine to recreate that sound in your DAW or live rig — all on your iPhone or iPad.
 
 Of course, you don't need Collector to use Engine. You can load any standard IR or NAM file from the community.
+
+---
+
+## Who Is This For?
+
+### Musicians of All Kinds
+
+SonicDNA Engine isn't limited to guitarists. It's a general-purpose audio processor that works with any audio source:
+
+- **Guitarists & Bassists** — Load NAM amp models and IR cabinet simulations for a complete amp-in-a-box experience
+- **Keyboardists & Synth Players** — Run your keyboard or synthesizer through vintage preamp models and speaker IRs to add analog warmth to digital sounds
+- **Vocalists & Podcasters** — Use microphone IRs to simulate classic studio microphones, apply subtle preamp coloring to your vocal chain
+- **Audiophiles & Sound Designers** — Experiment with room IRs, speaker simulations, and equipment modeling to shape your listening experience
+
+If it outputs audio, SonicDNA Engine can process it.
 
 ---
 
@@ -24,14 +39,14 @@ Of course, you don't need Collector to use Engine. You can load any standard IR 
 
 ### Standalone Effector Mode
 
-Connect your guitar through a USB audio interface and use SonicDNA Engine as a standalone amp simulator:
+Connect your instrument or microphone through a USB audio interface and use SonicDNA Engine as a standalone processor:
 
 ```
-Guitar → Audio Interface → iPhone/iPad → Audio Interface → Amp/Headphones
-                            (SonicDNA Engine)
+Instrument/Mic → Audio Interface → iPhone/iPad → Audio Interface → Speakers/Headphones
+                                    (SonicDNA Engine)
 ```
 
-Tap "Start Audio Engine" and you're playing through your favorite amp models with low-latency monitoring.
+Tap "Start Audio Engine" and you're processing audio through your favorite equipment models with low-latency monitoring.
 
 ### AUv3 Plugin Mode
 
@@ -42,33 +57,40 @@ SonicDNA Engine works as an Audio Unit Extension in any AUv3-compatible host:
 - **Logic Pro for iPad** — Professional music production
 - **Cubasis, BeatMaker**, and more
 
-Load it as an effect plugin, select your IR and NAM files, and you're ready to record.
+Load it as an effect plugin on any track — guitar, vocals, keyboards, synths, drums — and shape the sound with equipment modeling and convolution.
 
 ---
 
 ## The Signal Chain
 
-SonicDNA Engine processes your guitar signal through a carefully designed DSP chain:
+SonicDNA Engine processes your audio through a carefully designed DSP chain:
 
 ```
-Input → Input Gain → Noise Gate → NAM (Amp) → EQ → IR (Cabinet) → Output Level → Mix → Output
+Input → Input Gain → Noise Gate → NAM (Equipment Model) → EQ → IR (Convolution) → Output Level → Mix → Output
 ```
 
-### NAM Amp Modeling
+### NAM Equipment Modeling
 
-Load Neural Amp Modeler files to recreate the sound of real amplifiers. NAM uses machine learning to capture the nonlinear behavior of tube amps — the saturation, the dynamics, the feel. SonicDNA Engine supports WaveNet, LSTM, and Linear architectures.
+Load Neural Amp Modeler files to recreate the sound of real audio equipment. NAM uses machine learning to capture the nonlinear behavior of analog gear — the saturation, the dynamics, the character. SonicDNA Engine supports WaveNet, LSTM, and Linear architectures.
 
-Thousands of free NAM models are available on [ToneHunt](https://tonehunt.net) — from vintage Fender cleans to high-gain modern metal amps.
+While NAM is widely known for guitar amp modeling, the technology works for any audio equipment: preamps, channel strips, tape machines, and more.
 
-### IR Cabinet Simulation
+Thousands of free NAM models are available on [ToneHunt](https://tonehunt.net).
 
-Load impulse response files for accurate cabinet simulation. SonicDNA Engine uses FFT-based convolution (Overlap-Save algorithm) powered by Apple's Accelerate framework for efficient, real-time processing.
+### IR Convolution Processing
 
-Compatible with standard IR formats used by Helix, Axe-FX, Quad Cortex, Kemper, and more.
+Load impulse response files for accurate simulation of:
+
+- **Speaker cabinets** — Guitar cabs, bass cabs, studio monitors
+- **Microphones** — Simulate the character of classic studio mics
+- **Rooms & spaces** — Concert halls, studios, acoustic environments
+- **Equipment** — Any linear system captured as an IR
+
+SonicDNA Engine uses FFT-based convolution (Overlap-Save algorithm) powered by Apple's Accelerate framework for efficient, real-time processing.
 
 ### Built-in Effects
 
-- **Noise Gate** — Adjustable threshold with smooth gating for clean silence between notes
+- **Noise Gate** — Adjustable threshold with smooth gating for clean silence
 - **3-Band Parametric EQ** — Low shelf (200Hz), Mid bell (1kHz), High shelf (4kHz), each ±12dB
 - **Input/Output Gain** — Full signal level control
 - **Dry/Wet Mix** — Blend between your original signal and the processed sound
@@ -91,21 +113,22 @@ The DSP is implemented in C++ for maximum real-time performance:
 
 ### Low Latency
 
-SonicDNA Engine targets a 128-sample buffer at 48kHz (~2.7ms), keeping the total round-trip latency low enough for comfortable playing.
+SonicDNA Engine targets a 128-sample buffer at 48kHz (~2.7ms), keeping the total round-trip latency low enough for comfortable live performance.
 
 ### Preset System
 
-Save your favorite combinations of IR files, NAM models, and parameter settings as presets. Quickly switch between clean, crunch, and high-gain tones.
+Save your favorite combinations of IR files, NAM models, and parameter settings as presets. Quickly switch between different equipment setups.
 
 ---
 
 ## What Sets Us Apart
 
-1. **iOS-native NAM support** — Use the vast library of community NAM models on your iPhone/iPad
-2. **AUv3 plugin** — Works inside your favorite DAW, not just standalone
-3. **SonicDNA Collector integration** — Capture your own amp's DNA and play it back
-4. **Open formats** — Standard IR (WAV) and NAM files, no proprietary lock-in
-5. **Privacy-first** — All processing happens on-device, no data collection, no cloud dependency
+1. **Versatile audio processor** — Not just for guitar; works with any instrument, microphone, or audio source
+2. **iOS-native NAM support** — Use the vast library of community NAM models on your iPhone/iPad
+3. **AUv3 plugin** — Works inside your favorite DAW, not just standalone
+4. **SonicDNA Collector integration** — Capture your own equipment's DNA and play it back
+5. **Open formats** — Standard IR (WAV) and NAM files, no proprietary lock-in
+6. **Privacy-first** — All processing happens on-device, no data collection, no cloud dependency
 
 ---
 
@@ -116,7 +139,7 @@ SonicDNA Engine is currently in development. Here's what's on the roadmap:
 - **Latency optimization** — Targeting sub-3ms with Core Audio direct rendering
 - **SonicDNA Collector integration** — Seamless file sharing via App Groups
 - **Tuner** — Built-in chromatic tuner
-- **Dual Amp** — Blend two NAM models
+- **Dual processing** — Blend two NAM models
 - **MIDI Control** — Control parameters via MIDI CC
 - **Setlist Mode** — Organize presets for live performance
 
@@ -124,7 +147,7 @@ SonicDNA Engine is currently in development. Here's what's on the roadmap:
 
 ## Stay Updated
 
-Follow this blog for development updates, tips on getting the best tone, and guides for creating your own NAM models.
+Follow this blog for development updates, tips on getting the best sound, and guides for using IR/NAM files with different instruments and setups.
 
 Questions or feedback? Reach us at **sonicdna@hakaru.net**
 
