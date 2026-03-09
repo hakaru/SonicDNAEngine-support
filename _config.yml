@@ -1,0 +1,23 @@
+title: SonicDNA Engine Support
+description: Support page for SonicDNA Engine - IR/NAM Guitar Amp Simulator & AUv3 Plugin
+theme: jekyll-theme-minimal
+
+collections:
+  posts_en:
+    output: true
+    permalink: /blog/en/:name/
+  posts_ja:
+    output: true
+    permalink: /blog/ja/:name/
+
+defaults:
+  - scope:
+      type: posts_en
+    values:
+      layout: article
+      lang: en
+  - scope:
+      type: posts_ja
+    values:
+      layout: article
+      lang: ja

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "hakaru"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "hakaru apps",
+    "url": "https://hakaru.net/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hakaru.net/SonicDNAEngine-support{{ page.url }}"
+  }{% if page.description %},
+  "description": {{ page.description | jsonify }}{% endif %}
+}
+</script>
+
+<article>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+
+<hr>
+
+<p>
+{% if page.lang == "ja" %}
+  <a href="{{ '/blog/ja/' | relative_url }}">← ブログ一覧へ戻る</a>
+{% else %}
+  <a href="{{ '/blog/en/' | relative_url }}">← Back to Blog</a>
+{% endif %}
+</p>
