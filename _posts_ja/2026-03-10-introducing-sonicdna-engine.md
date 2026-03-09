@@ -1,8 +1,6 @@
 ---
 title: "SonicDNA Engine のご紹介 — iOS向けIR/NAMギターアンプシミュレーター"
 date: 2026-03-10
-description: "SonicDNA Engineは、Neural Amp ModelerとImpulse Responseの処理をiOSに持ち込む、スタンドアロンエフェクター兼AUv3プラグインです。"
-lang: ja
 ---
 
 **SonicDNA Engine** を発表します。iPhone/iPadで動作するギターアンプ＆キャビネットシミュレーターで、Neural Amp Modeler（NAM）とImpulse Response（IR）のリアルタイム処理を、スタンドアロンエフェクターとしても、AUv3プラグインとしても使えます。

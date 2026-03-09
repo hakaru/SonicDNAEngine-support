@@ -1,8 +1,6 @@
 ---
 title: "Introducing SonicDNA Engine — IR/NAM Guitar Amp Simulator for iOS"
 date: 2026-03-10
-description: "SonicDNA Engine brings Neural Amp Modeler and Impulse Response processing to iOS as a standalone effector and AUv3 plugin."
-lang: en
 ---
 
 We're excited to announce **SonicDNA Engine**, a guitar amp and cabinet simulator for iPhone and iPad that brings the power of Neural Amp Modeler (NAM) and Impulse Response (IR) processing to iOS — both as a standalone effector and as an AUv3 plugin.
