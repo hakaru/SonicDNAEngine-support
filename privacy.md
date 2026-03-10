@@ -8,7 +8,7 @@ SonicDNA Engine ("we", "our", or "the app") is committed to protecting your priv
 
 ## Summary
 
-**SonicDNA Engine does not collect any personal data.** All your audio processing happens in real-time on your device. IR and NAM files are stored locally and are never uploaded to any server.
+SonicDNA Engine processes audio entirely on your device in real-time. IR and NAM files are stored locally and are never uploaded to any server by the app. However, the app uses third-party services — Firebase Analytics & Crashlytics, Tone3000 API, and iCloud Drive — which may collect or process certain data as described below.
 
 ## Audio Processing
 
@@ -23,38 +23,41 @@ All audio processing in SonicDNA Engine is performed:
 
 IR and NAM files you import into SonicDNA Engine are:
 
-- Stored **locally on your device only**
-- **Never uploaded** to any server
+- Stored **locally on your device**
+- Synced to **iCloud Drive** if iCloud sync is enabled (see below)
+- **Never uploaded** to any server by the app itself
 - Accessible only to you
-- Manageable through the app's file browser
 
-## Data We Collect
+## Data We Collect and Use
 
-**We do not collect any data.** SonicDNA Engine:
+### Firebase Analytics & Crashlytics
 
-- Does not use analytics services
-- Does not use crash reporting services
-- Does not track usage patterns
-- Does not collect device information
+SonicDNA Engine uses Firebase Analytics and Firebase Crashlytics, services provided by Google LLC.
 
-## What We Do NOT Collect
+- **What is collected**: Anonymous usage data (feature usage, session length, app version, device model/OS version) and crash reports (crash stack traces, device state at time of crash)
+- **What is NOT collected**: Your audio, personal identity, or file contents
+- **Purpose**: To understand how the app is used and to diagnose bugs and crashes
+- **Processed by**: Google LLC (Firebase). See [Google's Privacy Policy](https://policies.google.com/privacy)
+- **Data retention**: Per Google Firebase defaults (crash reports: 90 days, analytics: 14 months)
+- **Opt-out**: You can limit ad tracking via iOS Settings > Privacy & Security > Tracking
 
-- Your audio input or output
-- Personal information (name, email, etc.)
-- Location data
-- Device identifiers
-- Usage statistics
-- Crash reports
-- IR or NAM file contents
+### Tone3000 API
 
-## Tracking and Advertising
+If you use the built-in model browser ("Store" tab) to browse or download NAM/IR models from Tone3000:
 
-**We do not track you.** SonicDNA Engine:
+- **What is transmitted**: Search queries, model browse history, your Tone3000 account credentials (email/password handled by Tone3000's authentication), and downloaded model URLs
+- **Authentication**: A Tone3000 account is required. Authentication tokens are stored securely in the iOS Keychain
+- **What is NOT transmitted**: Your audio data or locally stored IR/NAM files
+- **Processed by**: Tone3000. See [Tone3000's Privacy Policy](https://www.tone3000.com/privacy)
+- **Optional**: The Store tab and Tone3000 features are optional. You can use the app without signing in to Tone3000
 
-- Does not use advertising identifiers (IDFA)
-- Does not share data with advertisers
-- Does not track you across other apps or websites
-- Does not require App Tracking Transparency permission
+### iCloud Drive
+
+If you enable iCloud sync:
+
+- **What is synced**: IR files (WAV), NAM model files (JSON), and user presets across your Apple devices
+- **Processed by**: Apple Inc. via iCloud Drive. See [Apple's Privacy Policy](https://www.apple.com/privacy/)
+- **Control**: You can disable iCloud sync at any time via iOS Settings > [Your Name] > iCloud > SonicDNA Engine
 
 ## Microphone Access
 
@@ -75,7 +78,12 @@ When used as an AUv3 plugin in host applications:
 
 ## Third-Party Services
 
-SonicDNA Engine does not use any third-party services that collect data.
+| Service | Provider | Purpose | Data |
+|---------|----------|---------|------|
+| Firebase Analytics | Google LLC | App usage analytics | Anonymous usage stats |
+| Firebase Crashlytics | Google LLC | Crash reporting | Crash reports, device info |
+| Tone3000 API | Tone3000 | Model browser & download | Account auth, search queries |
+| iCloud Drive | Apple Inc. | File sync across devices | IR/NAM/preset files |
 
 ## Data Storage
 
@@ -85,16 +93,21 @@ Local data stored on your device:
 - Imported NAM model files (JSON)
 - User presets (parameter settings)
 - App preferences
+- Tone3000 authentication tokens (Keychain)
 
 This data can be managed through the app and is included in your device backups.
 
 ## Data Deletion
 
-You can delete your files at any time through the app's IR and NAM browsers. Uninstalling the app will remove all local data from your device.
+You can delete your files at any time through the app's IR and NAM browsers. Uninstalling the app will remove all local data from your device. Tone3000 account data is managed via Tone3000's website.
+
+## Tracking and Advertising
+
+SonicDNA Engine does not use advertising identifiers (IDFA) and does not share data with advertisers. Firebase Analytics uses anonymous identifiers that are not linked to your personal identity.
 
 ## Children's Privacy
 
-SonicDNA Engine does not collect any personal information from anyone, including children under 13.
+SonicDNA Engine does not knowingly collect personal information from children under 13. Firebase Analytics does not collect personally identifiable information.
 
 ## Changes to This Policy
 
